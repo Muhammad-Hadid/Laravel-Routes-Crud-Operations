@@ -5,7 +5,7 @@ use App\Http\Controllers\ItemController;
 
 Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/', function(){
-    return header('Location: /items');
+    return view('welcome');
 });
 Route::get('/items/create', [ItemController::class, 'create'])->name('items.create');
 Route::post('/items', [ItemController::class, 'store'])->name('items.store');
